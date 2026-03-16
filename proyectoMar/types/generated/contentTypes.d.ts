@@ -537,6 +537,7 @@ export interface ApiProfessorProfessor extends Struct.CollectionTypeSchema {
   };
   attributes: {
     classes: Schema.Attribute.Relation<'manyToMany', 'api::class.class'>;
+    classes_count: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

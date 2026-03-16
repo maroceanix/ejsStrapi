@@ -29,8 +29,8 @@ export interface DetailsDetailsEvent extends Struct.ComponentSchema {
   };
   attributes: {
     date: Schema.Attribute.Date;
-    hour: Schema.Attribute.Time;
     place: Schema.Attribute.String;
+    time: Schema.Attribute.Time;
   };
 }
 

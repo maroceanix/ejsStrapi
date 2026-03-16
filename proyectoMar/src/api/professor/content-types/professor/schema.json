@@ -17,6 +17,10 @@
     "lastname": {
       "type": "string"
     },
+    "classes_count": {
+      "type": "integer",
+      "default": 0
+    },
     "email": {
       "type": "email"
     },
