@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_details_details_classes",
+  "info": {
+    "displayName": "details_class"
+  },
+  "options": {},
+  "attributes": {
+    "aula": {
+      "type": "string"
+    },
+    "time": {
+      "type": "time"
+    }
+  },
+  "config": {}
+}

@@ -4,7 +4,7 @@ export default {
 
                 let titulo = event.params.data.title.trim();
                 let tituloDividido: string[] = [...titulo].filter(
-                        (char) => !/\d/.test(char)
+                        (char) => !/\d/.test(char),
                 );
 
                 event.params.data.slug = tituloDividido.join(" - ");
@@ -18,8 +18,7 @@ export default {
         },
 
         async afterCreate(event) {
-                console.log("--- 📧 Simulating email: new announcement created ---");
-                console.log(`Message: ${event.result.message || "No message"}`);
+                console.log("Simulating email: new announcement created");
         },
 
         async beforeUpdate(event) {
@@ -39,7 +38,7 @@ export default {
                 ) {
                         let tituloNuevo = data.title.trim();
                         let tituloDividido: string[] = [...tituloNuevo].filter(
-                                (char) => !/\d/.test(char)
+                                (char) => !/\d/.test(char),
                         );
 
                         event.params.data.slug = tituloDividido.join(" - ");
@@ -51,6 +50,6 @@ export default {
         },
 
         async afterUpdate(event) {
-                console.log("--- 📧 Simulating email: announcement updated!!:) ---");
+                console.log("Simulating email: announcement updated!!:)");
         },
 };

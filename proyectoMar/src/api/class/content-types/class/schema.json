@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classes",
+  "info": {
+    "singularName": "class",
+    "pluralName": "classes",
+    "displayName": "Class"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "init_date": {
+      "type": "date"
+    },
+    "details": {
+      "type": "component",
+      "component": "details.details-class",
+      "repeatable": false
+    },
+    "professors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::professor.professor",
+      "inversedBy": "classes"
+    }
+  }
+}
